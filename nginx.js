@@ -10,7 +10,7 @@ var exec = require('child_process').exec;
 
 //启动函数
 function start(){
-    //如果蚕食带了stop 也就是 node nginx.js stop
+    //如果参数带了stop 也就是 node nginx.js stop
     var arg = process.argv.splice(2)[0];
     if( arg && arg === 'stop'){
         let stopCmd = `docker kill mynginx`
